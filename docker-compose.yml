@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+
+  python:
+    build: .
+    image: validate-s3-backup:1.0.0
+    volumes:
+      - ./config.json:/src/config.json
+    ports:
+      - 9090:9090
+    restart: unless-stopped
