@@ -5,7 +5,7 @@ The validation check is on backup age but can be also on the size.
 
 ## Requirements
 
-- Python 3.9+
+- Python 3.8+
 - pipenv
 
 ## Installation
@@ -50,4 +50,5 @@ The three settings below are optional, but it is recommended to set them to narr
 
 A token can be used to secure the endpoint. In a configuration file, just add `token` property at the root level on the JSON.
 From the browser, go to `http://localhost:9090/<environment>/<backup>/?token=<token>`.
-_Notes: if you try to access the endpoint with a token but no token are set in the config, it will raise a 500 error'_
+
+_Notes: if you try to access the endpoint with a token but no token are set in the config, it will raise a 500 error._

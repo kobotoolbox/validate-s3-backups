@@ -5,8 +5,9 @@ name = "pypi"
 
 [packages]
 boto3 = "*"
+backports-zoneinfo = {version = "*", markers="python_version < '3.9'"}
 
 [dev-packages]
 
 [requires]
-python_version = "3.9"
+python_version = "3.8"

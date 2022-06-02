@@ -8,8 +8,11 @@ from datetime import datetime
 from functools import partial
 from http import HTTPStatus
 from typing import Dict
-from zoneinfo import ZoneInfo
-from urllib.parse import parse_qs, parse_qsl
+from urllib.parse import parse_qs
+try:
+    from zoneinfo import ZoneInfo
+except ImportError:
+    from backports.zoneinfo import ZoneInfo
 
 import boto3
 
@@ -212,7 +215,6 @@ class MyHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
         if not last_backup:
             raise BackupFileNotFoundException
 
-        print(' int(last_backup.size / 1024)',  int(last_backup.size / 1024), flush=True)
         if min_size and min_size > int(last_backup.size / 1024):
             raise BadSizeFileException
 
