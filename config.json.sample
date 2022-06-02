@@ -1,0 +1,16 @@
+{
+   "environment": {
+      "bucket_name": "mybucket",
+      "access_key": "aws access key",
+      "secret_key": "aws secret key",
+      "region": "us-east-1",
+      "backups": {
+         "service": {
+            "prefix": "path.to.backups/",
+            "suffix": ".extension",
+            "min_size": 209715200,
+            "age": "1D"
+         }
+      }
+   }
+}
