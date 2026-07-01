@@ -163,8 +163,6 @@ class MyHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
 
     def _validate_backup(self, config: Dict, backup: str):
         bucket_name = config['bucket_name']
-        access_key = config['access_key']
-        secret = config['secret_key']
         region = config.get('region')
 
         try:
@@ -189,8 +187,6 @@ class MyHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
         s3 = boto3.resource(
             's3',
             region_name=region,
-            aws_access_key_id=access_key,
-            aws_secret_access_key=secret,
         )
         bucket = s3.Bucket(bucket_name)
         last_backup = None

@@ -10,3 +10,6 @@ services:
     ports:
       - 9090:9090
     restart: unless-stopped
+    # environment:
+    #   - AWS_ACCESS_KEY_ID=setthis
+    #   - AWS_SECRET_ACCESS_KEY=setthis
