@@ -53,7 +53,7 @@ From the browser, go to `http://localhost:9090/<environment>/<backup>/?token=<to
 
 _Notes: if you try to access the endpoint with a token but no token are set in the config, it will raise a 500 error._
 
-# AWS Authentication
+## AWS Authentication
 boto3 will use many ways to get credentials - follow the guide [here](https://docs.aws.amazon.com/boto3/latest/guide/credentials.html#configuring-credentials)
 
 If you want to use static credentials, you can uncomment them in the `docker-compose.yml` file and set them as appropriate.
