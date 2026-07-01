@@ -1,8 +1,6 @@
 {
    "environment": {
       "bucket_name": "mybucket",
-      "access_key": "aws access key",
-      "secret_key": "aws secret key",
       "region": "us-east-1",
       "backups": {
          "service": {
